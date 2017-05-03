@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+    <head>
+        <title>Jogo Othello</title>
+        <script language="javascript" src="static/js/othello.js"> </script>
+        <link type="text/css" rel="stylesheet" href="static/css/styles.css" />
+    </head>
+    <body onload="NovoJogo()"> 
+        <h1 align="left">Jogo Othello</h1>
+        <div class="cabecalho">
+            <center>
+            <div class="pl1">
+                <b id="branco_pontos">0</b>
+            </div>
+            <div id="atualJogador" class="plcenter"></div>
+            <div class="pl2">
+                <b id="preto_pontos" >0</b>
+            </div>
+            <div class="clear"></div>
+        </center>
+        </div>
+        <table class="table">
+          <tbody>
+          <tr>
+            <td id="tabuleiro11">
+                <img onclick="verificaJogada(1,1)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro12">
+                <img onclick="verificaJogada(1,2)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro13">
+                <img onclick="verificaJogada(1,3)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro14">
+                <img onclick="verificaJogada(1,4)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro15">
+                <img onclick="verificaJogada(1,5)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro16">
+                <img onclick="verificaJogada(1,6)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro17">
+                <img onclick="verificaJogada(1,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro18">
+                <img onclick="verificaJogada(1,8)" src="semBolinha.gif"/>
+            </td>
+          </tr>
+          <tr>
+            <td id="tabuleiro21">
+                <img onclick="verificaJogada(2,1)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro22">
+                <img onclick="verificaJogada(2,2)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro23">
+                <img onclick="verificaJogada(2,3)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro24">
+                <img onclick="verificaJogada(2,4)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro25">
+                <img onclick="verificaJogada(2,5)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro26">
+                <img onclick="verificaJogada(2,6)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro27">
+                <img onclick="verificaJogada(2,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro28">
+                <img onclick="verificaJogada(2,8)" src="semBolinha.gif"/>
+            </td>
+          </tr>
+          <tr>
+            <td id="tabuleiro31">
+                <img onclick="verificaJogada(3,1)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro32">
+                <img onclick="verificaJogada(3,2)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro33">
+                <img onclick="verificaJogada(3,3)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro34">
+                <img onclick="verificaJogada(3,4)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro35">
+                <img onclick="verificaJogada(3,5)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro36">
+                <img onclick="verificaJogada(3,6)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro37">
+                <img onclick="verificaJogada(3,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro38">
+                <img onclick="verificaJogada(3,8)" src="semBolinha.gif" />
+            </td>
+          </tr>
+          <tr>
+            <td id="tabuleiro41">
+                <img onclick="verificaJogada(4,1)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro42">
+                <img onclick="verificaJogada(4,2)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro43">
+                <img onclick="verificaJogada(4,3)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro44">
+                <img onclick="verificaJogada(4,4)" src="semBolinha.gif"/>
+            </td>
+            <td id="tabuleiro45">
+                <img onclick="verificaJogada(4,5)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro46">
+                <img onclick="verificaJogada(4,6)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro47">
+                <img onclick="verificaJogada(4,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro48">
+                <img onclick="verificaJogada(4,8)" src="semBolinha.gif" />
+            </td>
+          </tr>
+          <tr>
+            <td id="tabuleiro51">
+                <img onclick="verificaJogada(5,1)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro52">
+                <img onclick="verificaJogada(5,2)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro53">
+                <img onclick="verificaJogada(5,3)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro54">
+                <img onclick="verificaJogada(5,4)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro55">
+                <img onclick="verificaJogada(5,5)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro56">
+                <img onclick="verificaJogada(5,6)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro57">
+                <img onclick="verificaJogada(5,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro58">
+                <img onclick="verificaJogada(5,8)" src="semBolinha.gif" />
+            </td>
+          </tr>
+          <tr>
+            <td id="tabuleiro61">
+                <img onclick="verificaJogada(6,1)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro62">
+                <img onclick="verificaJogada(6,2)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro63">
+                <img onclick="verificaJogada(6,3)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro64">
+                <img onclick="verificaJogada(6,4)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro65">
+                <img onclick="verificaJogada(6,5)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro66">
+                <img onclick="verificaJogada(6,6)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro67">
+                <img onclick="verificaJogada(6,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro68">
+                <img onclick="verificaJogada(6,8)" src="semBolinha.gif" />
+            </td>
+          </tr>
+          <tr>
+            <td id="tabuleiro71">
+                <img onclick="verificaJogada(7,1)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro72">
+                <img onclick="verificaJogada(7,2)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro73">
+                <img onclick="verificaJogada(7,3)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro74">
+                <img onclick="verificaJogada(7,4)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro75">
+                <img onclick="verificaJogada(7,5)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro76">
+                <img onclick="verificaJogada(7,6)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro77">
+                <img onclick="verificaJogada(7,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro78">
+                <img onclick="verificaJogada(7,8)" src="semBolinha.gif" />
+            </td>
+          </tr>
+          <tr>
+            <td id="tabuleiro81">
+                <img onclick="verificaJogada(8,1)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro82">
+                <img onclick="verificaJogada(8,2)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro83">
+                <img onclick="verificaJogada(8,3)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro84">
+                <img onclick="verificaJogada(8,4)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro85">
+                <img onclick="verificaJogada(8,5)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro86">
+                <img onclick="verificaJogada(8,6)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro87">
+                <img onclick="verificaJogada(8,7)" src="semBolinha.gif" />
+            </td>
+            <td id="tabuleiro88">
+                <img onclick="verificaJogada(8,8)" src="semBolinha.gif" />
+            </td>
+          </tr>
+        </tbody>
+        </table>
+    <br/>
+</body>
+</html>
